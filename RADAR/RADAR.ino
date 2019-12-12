@@ -1,25 +1,29 @@
 // Includes the Servo library
 #include <Servo.h>. 
 int buffer[512];
-// Defines Tirg and Echo pins of the Ultrasonic Sensor
+// Defines Trigger and Echo pins of the Ultrasonic Sensor
 const int trigPin = 10;
 const int echoPin = 11;
-int i = 15;
+
+//define angles for servo to sweep between
+int i = 15; 
 int j = 165;
+
 // Variables for the duration and the distance
 long duration;
 int distance;
+
 Servo myServo; // Creates a servo object for controlling the servo motor
+
 void setup() {
-  pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
-  pinMode(echoPin, INPUT); // Sets the echoPin as an Input
+  pinMode(trigPin, OUTPUT); // Sets the trigPin as output
+  pinMode(echoPin, INPUT); // Sets the echoPin as input
   Serial.begin(9600);
   myServo.attach(6); // Defines on which pin is the servo motor attached
 }
 
 // Function for calculating the distance measured by the Ultrasonic sensor
 int calculateDistance(){ 
-  
   digitalWrite(trigPin, LOW); 
   delayMicroseconds(2);
   // Sets the trigPin on HIGH state for 10 micro seconds
@@ -32,7 +36,7 @@ int calculateDistance(){
 }
 
 void loop() {
-  // rotates the servo motor from 15 to 165 degrees
+  // sweep from starting position to 165 degrees while calculating the distance
   while(i < 165) {
   myServo.write(i);
   delay(30);
@@ -45,6 +49,7 @@ void loop() {
   i++;
   }
   
+  //sweep from 165 degrees to 15 degrees
   while(j > 15) {
   myServo.write(j);
   delay(30);
