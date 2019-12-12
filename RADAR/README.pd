@@ -1,0 +1,11 @@
+#RADAR
+This project was my capstone for my Physics 4BL Lab. Using an Arduino Uno and the HRS-04 ultrasound sensor, my team created a realtime radar system and performed analysis.
+
+Our project was in 3 parts:
+1. Calibration of the Ultrasound Sensor Speed of Sound
+2. Calculate and plot objects in polar graph using matplotlib
+3. Calculate the widths of objects using arclength
+
+The RADAR.ino was self created with help from https://howtomechatronics.com/projects/arduino-radar-project/, while the RADAR.pde file is from his with minor tweaking.
+
+The ipynb file was entirely selfcreated and was used to calculate the widths and plots of the data.
