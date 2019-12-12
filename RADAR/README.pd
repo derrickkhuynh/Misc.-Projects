@@ -8,4 +8,4 @@ Our project was in 3 parts:
 
 The RADAR.ino was self created with help from https://howtomechatronics.com/projects/arduino-radar-project/, while the RADAR.pde file is from his with minor tweaking.
 
-The ipynb file was entirely selfcreated and was used to calculate the widths and plots of the data.
+The Polar_Graphs.ipynb file was entirely selfcreated and was used to calculate the widths and plots of the data, while Speed_of_Sound_Analysis.ipynb was provided by the 4BL lab TAs. 
